@@ -1,0 +1,18 @@
+---
+const { logo } = Astro.props;
+---
+
+<div class="pl-8">{logo}</div>
+<nav class="ml-auto flex gap-8 py-4 pr-8 font-bold not-sm:invisible">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/blog/">Blog</a>
+</nav>
+<nav
+  id="nav-links"
+  class="invisible absolute top-24 right-4 ml-auto grid gap-8 bg-gray-900 p-4 py-4 pr-8 font-bold sm:hidden"
+>
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/blog/">Blog</a>
+</nav>

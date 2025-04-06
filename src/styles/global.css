@@ -4,16 +4,29 @@
   body {
     @apply bg-gray-800 font-mono text-sky-400;
   }
+  header {
+    @apply mb-16;
+  }
   h1,
   h2,
   h3,
   h4 {
     @apply text-balance;
   }
+  p {
+    @apply mb-2;
+  }
+  p,
+  li {
+    @apply mx-auto max-w-[65ch] indent-4;
+  }
+  ul {
+    @apply mx-auto max-w-[65ch];
+  }
+  a {
+    @apply underline-offset-2 hover:text-sky-500/60 hover:underline;
+  }
   .container {
     @apply mx-auto px-8;
-  }
-  .paragraph {
-    @apply mx-auto my-4 max-w-[65ch] text-lg;
   }
 }

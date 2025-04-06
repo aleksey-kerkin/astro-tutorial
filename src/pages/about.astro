@@ -1,5 +1,22 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const pageTitle = "About Me";
+
+const identity = {
+  firstName: "Aleksey",
+  country: "Russia",
+  occupation: "Frontend Dev",
+  hobbies: ["photography", "black coffee", "coding"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "Astro", "VueJS"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -7,46 +24,79 @@ import "../styles/global.css";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
-    <header class="sticky top-0 flex items-center bg-gray-900 text-xl">
-      <div class="pl-16">SomeLogo</div>
-      <div class="ml-auto flex gap-8 py-4 pr-16 font-bold">
-        <a
-          class="underline-offset-2 hover:text-sky-500/60 hover:underline hover:decoration-wavy"
-          href="/">Home</a
-        >
-        <a
-          class="underline-offset-2 hover:text-sky-500/60 hover:underline hover:decoration-wavy"
-          href="/about/">About</a
-        >
-        <a
-          class="underline-offset-2 hover:text-sky-500/60 hover:underline hover:decoration-wavy"
-          href="/blog/">Blog</a
-        >
-      </div>
+    <header>
+      <Header />
     </header>
-    <main class="container min-h-screen place-content-center">
+    <main class="container">
       <h1
         class="bg-gradient-to-br from-sky-100 via-sky-300 to-sky-600 bg-clip-text text-center text-8xl font-black text-transparent"
       >
-        About Me
+        {pageTitle}
       </h1>
       <h2
         class="mb-8 bg-gradient-to-br from-sky-600 via-sky-300 to-sky-100 bg-clip-text text-center text-4xl text-transparent"
       >
         ... and my new Astro site!
       </h2>
-      <p class="paragraph">
-        I am working through Astro's introductory tutorial. This is the second
-        page on my website, and it's the first one I built myself!
-      </p>
-      <p class="paragraph">
-        This site will update as I complete more of the tutorial, so keep
-        checking back and see how my journey is going!
-      </p>
+      <div class="space-y-8">
+        <p class="text-lg">
+          I am working through Astro's introductory tutorial. This is the second
+          page on my website, and it's the first one I built myself!
+        </p>
+        <p class="text-lg">
+          This site will update as I complete more of the tutorial, so keep
+          checking back and see how my journey is going!
+        </p>
+        <div>
+          <p class="text-lg">Here are a few facts about me:</p>
+          <ul class="list-inside list-disc">
+            <li>My name is {identity.firstName}.</li>
+            <li>
+              I live in {identity.country} and I work as a {
+                identity.occupation
+              }.
+            </li>
+            {
+              identity.hobbies.length >= 2 && (
+                <li>
+                  Two of my hobbies are: {identity.hobbies[0]} and{" "}
+                  {identity.hobbies[1]}.
+                </li>
+              )
+            }
+          </ul>
+        </div>
+        <div>
+          <p class="text-lg">My skills are:</p>
+          <ul class="list-inside list-disc">
+            {
+              skills.map((skill) => (
+                <li class="font-semibold text-green-400">{skill}</li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+          {happy && <p class="text-lg">I am happy to be learning Astro!</p>}
+
+          {finished && <p class="text-lg">I finished this tutorial!</p>}
+
+          {
+            goal === 3 ? (
+              <p class="text-lg">My goal is to finish in 3 days.</p>
+            ) : (
+              <p class="text-lg">My goal is not 3 days.</p>
+            )
+          }
+        </div>
+      </div>
     </main>
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
 </html>
