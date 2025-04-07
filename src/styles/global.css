@@ -39,9 +39,15 @@
     @apply list-decimal;
   }
   a {
-    @apply text-sky-200 underline-offset-2 hover:text-sky-500/60 hover:underline;
+    @apply text-sky-200 underline-offset-2 duration-100 hover:text-sky-500/60 hover:underline;
+  }
+  code {
+    @apply bg-sky-50/5 p-1 text-sky-200/50 ring-1 ring-sky-100/10;
   }
   .container {
     @apply mx-auto px-8;
+  }
+  .tag {
+    @apply cursor-pointer px-2 font-semibold text-green-400 underline-offset-2 ring-2 duration-100 hover:text-green-700 hover:underline;
   }
 }
