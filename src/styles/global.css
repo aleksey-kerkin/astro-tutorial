@@ -48,6 +48,6 @@
     @apply mx-auto px-8;
   }
   .tag {
-    @apply cursor-pointer px-2 font-semibold text-green-400 underline-offset-2 ring-2 duration-100 hover:text-green-700 hover:underline;
+    @apply cursor-pointer px-2 font-semibold text-nowrap text-green-400 underline-offset-2 ring-2 duration-100 hover:text-green-700 hover:underline;
   }
 }
