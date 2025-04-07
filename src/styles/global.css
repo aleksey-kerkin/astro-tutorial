@@ -13,6 +13,18 @@
   h4 {
     @apply text-balance;
   }
+  h1 {
+    @apply mb-8 bg-gradient-to-br from-sky-100 via-sky-300 to-sky-600 bg-clip-text text-center font-mono text-5xl font-black text-transparent sm:text-8xl;
+  }
+  h2 {
+    @apply mb-8 bg-gradient-to-br from-sky-600 via-sky-300 to-sky-100 bg-clip-text text-center text-3xl text-transparent sm:text-4xl;
+  }
+  h3 {
+    @apply mt-6 mb-2 text-center text-xl text-sky-300 sm:text-2xl;
+  }
+  blockquote {
+    @apply mx-auto max-w-[70ch] border-l-2 bg-sky-50/5 py-4;
+  }
   p {
     @apply mb-2;
   }
@@ -23,8 +35,11 @@
   ul {
     @apply mx-auto max-w-[65ch];
   }
+  ol {
+    @apply list-decimal;
+  }
   a {
-    @apply underline-offset-2 hover:text-sky-500/60 hover:underline;
+    @apply text-sky-200 underline-offset-2 hover:text-sky-500/60 hover:underline;
   }
   .container {
     @apply mx-auto px-8;

@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 
 const identity = {
@@ -17,11 +17,7 @@ const goal = 3;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2
-    class="mb-8 bg-gradient-to-br from-sky-600 via-sky-300 to-sky-100 bg-clip-text text-center text-3xl text-transparent sm:text-4xl"
-  >
-    ... and my new Astro site!
-  </h2>
+  <h2>... and my new Astro site!</h2>
   <div class="space-y-8">
     <p class="text-lg">
       I am working through Astro's introductory tutorial. This is the second
