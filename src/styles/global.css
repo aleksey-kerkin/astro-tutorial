@@ -2,7 +2,7 @@
 
 @layer components {
   body {
-    @apply bg-gray-800 font-mono text-sky-400;
+    @apply grid min-h-screen bg-gray-800 font-mono text-sky-400;
   }
   header {
     @apply mb-16;
