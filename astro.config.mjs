@@ -8,4 +8,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  site: "https://wonderful-astro-tutorial.netlify.app/",
 });
